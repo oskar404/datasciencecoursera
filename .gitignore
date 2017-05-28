@@ -31,3 +31,7 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+
+# Common names used in this project for datasets not to be stored in git repo
+/dataset.zip
+/UCI HAR Dataset
