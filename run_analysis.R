@@ -90,3 +90,46 @@ clean_data <- function(nrows = -1) {
     data
 }
 
+
+# Returns average of each variable for each activity and each subject
+#
+# Input x is what clean_data() provides.
+#
+analyze_data <- function(x) {
+    analysis <- data %>%
+        group_by(subject, activity) %>%
+        summarize_all(mean)
+    analysis
+}
+
+
+# run_analysis() function downloads the dataset, cleans the data and runs an
+# analysis on the set. The function stores the results to two files:
+# - clean_data.csv contains the data provided by clean_data() function.
+# - analysis.csv which contains the average of each variable for each activity
+#   and each subject.
+#
+# Returns the analysis result as a data.frame
+#
+# The arguments can be used for testing:
+# - Set download argument to FALSE if data exists already
+# - Set test argument to TRUE if a small sample is needed to test the output
+#
+run_analysis <- function(download = TRUE, test = FALSE) {
+    if (download) {
+        download_data()
+    }
+    nrows = -1
+    if (test) {
+        nrows = 50
+    }
+    # Get clean data
+    data <- clean_data(nrows)
+    write.csv(data, "clean_data.csv", row.names = FALSE)
+
+    # Analyze the data
+    analysis <- analyze_data(data)
+    write.csv(analysis, "analysis.csv", row.names = FALSE)
+
+    analysis
+}

@@ -35,3 +35,5 @@ vignettes/*.pdf
 # Common names used in this project for datasets not to be stored in git repo
 /dataset.zip
 /UCI HAR Dataset
+/analysis.csv
+/clean_data.csv
