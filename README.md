@@ -44,7 +44,7 @@ The raw data is provided by
         Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz,
         Spain. Dec 2012
 
-The raw data set can be download manually from [site provided by Coursera]("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip")
+The raw data set can be download manually from link provided by Coursera: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ### Cleaned Data Set
 
